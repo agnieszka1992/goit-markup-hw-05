@@ -14,7 +14,9 @@
 body {
   font-family: "Roboto", "Raleway", sans-serif;
   color: #212121;
-  margin: 0 auto;
+  background-color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.03;
 }
 
 *,
@@ -22,6 +24,27 @@ body {
 *::before {
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .list {
@@ -61,7 +84,6 @@ body {
 }
 
 .button {
-  all: unset;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -69,6 +91,7 @@ body {
   border-radius: 4px;
   line-height: 1.63;
   letter-spacing: 0.03em;
+  border: none;
   background-color: var(--brand-color-three);
   cursor: pointer;
 
@@ -85,19 +108,33 @@ body {
 }
 
 .title {
+  width: 696px;
   font-size: 44px;
   line-height: 1.36;
   font-weight: 900;
   color: var(--brand-color-one);
-
   margin: 0 auto;
   text-align: center;
-  padding-top: 106px;
   padding-bottom: 30px;
 }
 
+.background-title {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(/goit-markup-hw-05/images/background.jpg);
+  padding: 200px 0;
+  text-align: center;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
 .item {
-  all: unset;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -105,10 +142,11 @@ body {
   letter-spacing: 0.06em;
   background-color: var(--brand-color);
   color: var(--brand-color-one);
-  padding: 10px 41px 10px 42px;
+  padding: 10px 42px 10px 41px;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
 }
 
 .title-fourth {
@@ -173,8 +211,7 @@ body {
   text-decoration: none;
   display: flex;
   flex-direction: row-reverse;
-  align-content: flex-start;
-  fill: var(--brand-color-four);
+  align-content: center;
   color: var(--brand-color-four);
 
   transition: color 250ms var(--transition-timing-function),
@@ -182,12 +219,12 @@ body {
 }
 
 .contact-icon {
+  fill: currentColor;
   margin-right: 10px;
 }
 
 .contact-details:hover,
 .contact-details:focus {
-  fill: var(--brand-color);
   color: var(--brand-color);
 }
 
@@ -221,26 +258,6 @@ body {
   padding-bottom: 51px;
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 15px;
-}
-
-.content {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 104px;
-}
-
-.section {
-  padding: 94px 0;
-  margin: 0 auto;
-}
-
 .button-list {
   display: flex;
   justify-content: center;
@@ -259,16 +276,17 @@ body {
   padding-top: 24px;
   padding-bottom: 25px;
 }
+.contact-info {
+  margin-right: auto;
+}
 
 .list-header {
   display: flex;
-  gap: 46px;
-  margin-right: 325px;
-  padding-left: 0%;
+  gap: 50px;
 }
 
 .list-header-two {
-  display: inline-flex;
+  display: flex;
   gap: 50px;
 }
 
@@ -321,10 +339,8 @@ body {
 }
 
 h2 {
-  display: flex;
-  justify-content: center;
   padding-bottom: 50px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .card-team {
@@ -336,11 +352,11 @@ h2 {
 
 .card-heading-team {
   text-align: center;
+  padding: 30px 0;
 }
 
 .card-heading-team > h4 {
   margin: 0 auto;
-  padding-top: 30px;
   padding-bottom: 10px;
 }
 
@@ -403,11 +419,8 @@ h2 {
 
 .social-media-list {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 30px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .social-link {
@@ -419,7 +432,6 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
 
   transition: background-color 250ms var(--transition-timing-function),
     fill 250ms var(--transition-timing-function);
@@ -476,14 +488,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-.background-title {
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(/goit-markup-hw-05/images/background.jpg);
-}
-
 .footer {
   display: inline-flex;
   flex-direction: column;
@@ -523,17 +527,13 @@ h2 {
 .label-text {
   color: var(--brand-color-one);
   text-transform: uppercase;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
-  margin-bottom: 20px;
-  padding-top: 27px;
-}
-
-.label-box {
+  font-weight: 700;
   height: 70px;
   width: 370px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(47, 48, 58, 0.8);
   position: absolute;
   bottom: 0;
@@ -579,6 +579,11 @@ h2 {
   left: 0;
   background: rgba(0, 0, 0, 0.2);
   z-index: 2;
+  opacity: inherit;
+  visibility: inherit;
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .modal {
@@ -592,12 +597,6 @@ h2 {
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-
-  opacity: inherit;
-  visibility: inherit;
-  transition-property: visibility, opacity;
-  transition-duration: 250ms;
-  transition-timing-function: var(--transition-timing-function);
 }
 
 .close-button {

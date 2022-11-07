@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,67 +19,58 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="node_modules/modern-normalize/modern-normalize.css"
-    />
   </head>
 
   <body>
     <header class="background-header">
-      <div class="container">
-        <div class="info-header">
-          <a href="#" class="link-logo"><span class="logo">Web</span>Studio</a>
-          <nav class="contact-info">
-            <ul class="list list-header">
-              <li>
-                <a href="./index.html" class="underline-one link">Agencja</a>
-              </li>
-              <li><a href="./portfolio.html" class="link">Portfolio</a></li>
-              <li><a href="#" class="link">Kontakt</a></li>
-            </ul>
-          </nav>
-
-          <ul class="list list-header-two">
+      <div class="container info-header">
+        <a href="#" class="link-logo"><span class="logo">Web</span>Studio</a>
+        <nav class="contact-info">
+          <ul class="list list-header">
             <li>
-              <a href="mailto:info@devstudio.com" class="contact-details"
-                >info@devstudio.com
-                <svg class="contact-icon" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-              </a>
+              <a href="./index.html" class="underline-one link">Agencja</a>
             </li>
-            <li>
-              <a href="tel:+48111111111" class="contact-details"
-                >+48 111 111 111
-                <svg class="contact-icon phone" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-              </a>
-            </li>
+            <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+            <li><a href="#" class="link">Kontakt</a></li>
           </ul>
-        </div>
+        </nav>
+
+        <ul class="list list-header-two">
+          <li>
+            <a href="mailto:info@devstudio.com" class="contact-details"
+              >info@devstudio.com
+              <svg class="contact-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+48111111111" class="contact-details"
+              >+48 111 111 111
+              <svg class="contact-icon phone" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
-      <section class="background-title section">
+      <section class="background-title">
         <div class="container">
-          <div class="content">
-            <h1 class="title title-main">
-              EFEKTYWNE ROZWIĄZANIA<br />
-              DLA WASZEGO BIZNESU
-            </h1>
-            <button type="button" class="item open-button" data-modal-open>
-              Zamów usługe
-            </button>
-            <div class="backdrop is-hidden" data-modal>
-              <div class="modal">
-                <button class="close-button" data-modal-close>
-                  <svg class="modal-btn" width="11" height="11">
-                    <use href="./images/icons.svg#icon-close-button"></use>
-                  </svg>
-                </button>
-              </div>
+          <h1 class="title title-main">
+            EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
+          </h1>
+          <button type="button" class="item open-button" data-modal-open>
+            Zamów usługe
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="close-button" data-modal-close>
+                <svg class="modal-btn" width="11" height="11">
+                  <use href="./images/icons.svg#icon-close-button"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -137,9 +135,6 @@
           <h2 class="title-second">Czym się zajmujemy</h2>
           <ul class="list orden-list">
             <li class="box-picture">
-              <div class="label-box">
-                <p class="label-text">Aplikacje komputerowe</p>
-              </div>
               <img
                 class="picture"
                 src="./images/developer-code.jpg"
@@ -147,11 +142,9 @@
                 width="370"
                 height="294"
               />
+              <p class="label-text">Aplikacje komputerowe</p>
             </li>
             <li class="box-picture">
-              <div class="label-box">
-                <p class="label-text">Aplikacje mobilne</p>
-              </div>
               <img
                 class="picture"
                 src="./images/mobile-app.jpg"
@@ -159,11 +152,9 @@
                 width="370"
                 height="294"
               />
+              <p class="label-text">Aplikacje mobilne</p>
             </li>
             <li class="box-picture">
-              <div class="label-box">
-                <p class="label-text">Rozwiązania graficzne</p>
-              </div>
               <img
                 class="picture"
                 src="./images/web-disigne.jpg"
@@ -171,13 +162,11 @@
                 width="370"
                 height="294"
               />
+              <p class="label-text">Rozwiązania graficzne</p>
             </li>
           </ul>
         </div>
       </section>
-      <ul>
-        <li></li>
-      </ul>
 
       <section class="section background-second">
         <div class="container">
