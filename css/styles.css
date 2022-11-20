@@ -16,7 +16,7 @@ body {
   color: #212121;
   background-color: #ffffff;
   font-size: 14px;
-  letter-spacing: 0.03;
+  letter-spacing: 0.03em;
 }
 
 *,
@@ -96,7 +96,8 @@ p {
   cursor: pointer;
 
   transition: background-color 250ms var(--transition-timing-function),
-    color 250ms var(--transition-timing-function);
+    color 250ms var(--transition-timing-function),
+    box-shadow 250ms var(--transition-timing-function);
 }
 
 .button:hover,
@@ -115,7 +116,7 @@ p {
   color: var(--brand-color-one);
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .background-title {
@@ -214,8 +215,7 @@ p {
   align-content: center;
   color: var(--brand-color-four);
 
-  transition: color 250ms var(--transition-timing-function),
-    fill 250ms var(--transition-timing-function);
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .contact-icon {
@@ -263,18 +263,15 @@ p {
   justify-content: center;
   margin: 0 auto;
   gap: 8px;
-}
-
-.button-padding {
-  padding-bottom: unset;
+  margin-bottom: 50px;
 }
 
 .info-header {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  margin-top: 24px;
+  margin-bottom: 25px;
 }
 .contact-info {
   margin-right: auto;
@@ -296,15 +293,11 @@ p {
 }
 
 .a-list {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .margin {
   margin: 0 auto;
-}
-
-.portfolio-padding {
-  padding-top: 50px;
 }
 
 .card-heading {
@@ -339,7 +332,7 @@ p {
 }
 
 h2 {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -387,8 +380,14 @@ h2 {
   transition: box-shadow 250ms var(--transition-timing-function);
 }
 
-.card-shadow:hover,
-.card-shadow:focus {
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: var(--brand-color-two);
+}
+
+.card-link:hover,
+.card-link:focus {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -411,6 +410,10 @@ h2 {
     fill 250ms var(--transition-timing-function);
 }
 
+.client-link svg {
+  transition: fill 250ms var(--transition-timing-function);
+}
+
 .client-link:hover,
 .client-link:focus {
   fill: var(--brand-color);
@@ -426,15 +429,19 @@ h2 {
 .social-link {
   width: 44px;
   height: 44px;
-  fill: var(--brand-color-eight);
-  background-color: var(--brand-color-one);
   border-radius: 50%;
+  background-color: var(--brand-color-one);
+  fill: var(--brand-color-eight);
   display: flex;
   align-items: center;
   justify-content: center;
 
   transition: background-color 250ms var(--transition-timing-function),
     fill 250ms var(--transition-timing-function);
+}
+
+.social-link svg {
+  transition: fill 250ms var(--transition-timing-function);
 }
 
 .social-link:hover,
@@ -447,12 +454,12 @@ h2 {
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
-  fill: var(--brand-color-one);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  fill: var(--brand-color-one);
 
   transition: background-color 250ms var(--transition-timing-function);
 }
@@ -462,15 +469,17 @@ h2 {
   background-color: var(--brand-color);
 }
 
+.container-footer {
+  display: flex;
+  align-items: baseline;
+}
+
 .list-footer {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
 .social-media-footer {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
   margin-left: 70px;
 }
 
@@ -482,16 +491,9 @@ h2 {
 .title-footer {
   color: var(--brand-color-one);
   text-transform: uppercase;
-  font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   margin-bottom: 20px;
-}
-
-.footer {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .underline-one::after {
@@ -567,7 +569,8 @@ h2 {
   color: var(--brand-color-one);
 }
 
-.card-shadow:hover .portfolio-overflay {
+.card-link:hover .portfolio-overflay,
+.card-link:focus .portfolio-overflay {
   transform: translatey(0);
 }
 
